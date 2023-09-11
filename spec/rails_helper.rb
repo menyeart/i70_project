@@ -1,7 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 
 require "simplecov"
-Simplecov.start
+SimpleCov.start
 
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
@@ -66,6 +66,10 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-Shoulda::Matchers.configure do |config|
-  config.integreate do |with|
-    with.test_framework
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.configure_rspec_metadata!
+  config.hook_into :webmock
+  config.filter_sensitive_data('<GOOG_KEY>') { ENV["goog_api"] }
+end
+
