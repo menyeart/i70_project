@@ -7,6 +7,7 @@ gem "faraday"
 gem "figaro"
 
 
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
@@ -47,6 +48,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "webmock"
   gem "vcr"
+  gem "pry"
 end
 
 group :development do
