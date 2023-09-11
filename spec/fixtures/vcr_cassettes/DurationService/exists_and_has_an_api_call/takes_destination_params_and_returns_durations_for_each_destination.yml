@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=100000009000&destinations=place_id:ChIJDW4E2OtRaocR6Ny-eVsZRyY%7Cplace_id:ChIJy0LIeaDKa4cRW2sSTH03-bU%7Cplace_id:ChIJe2Rv9PdfaocR-3_TarNZh2M&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 11 Sep 2023 22:56:07 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Denver, CO
+      Server:
+      - mafe
+      Content-Length:
+      - '1804'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=106
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"I-70, Dillon, CO
+        80435, USA\",\n      \"Bridger Ct, Winter Park, CO 80482, USA\",\n      \"102
+        Wheeler Pl, Frisco, CO 80443, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n
+        \     \"Golden, CO, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"48.1 mi\",\n                  \"value\" : 77365\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"53 mins\",\n                  \"value\" : 3178\n               },\n               \"duration_in_traffic\"
+        : \n               {\n                  \"text\" : \"1 hour 3 mins\",\n                  \"value\"
+        : 3771\n               },\n               \"status\" : \"OK\"\n            },\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"56.6 mi\",\n                  \"value\" : 91080\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"1 hour 11 mins\",\n                  \"value\"
+        : 4236\n               },\n               \"duration_in_traffic\" : \n               {\n
+        \                 \"text\" : \"1 hour 18 mins\",\n                  \"value\"
+        : 4709\n               },\n               \"status\" : \"OK\"\n            },\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"69.0 mi\",\n                  \"value\" : 111076\n               },\n
+        \              \"duration\" : \n               {\n                  \"text\"
+        : \"1 hour 13 mins\",\n                  \"value\" : 4401\n               },\n
+        \              \"duration_in_traffic\" : \n               {\n                  \"text\"
+        : \"1 hour 28 mins\",\n                  \"value\" : 5275\n               },\n
+        \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
+        \  \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 11 Sep 2023 22:56:07 GMT
+recorded_with: VCR 6.2.0
