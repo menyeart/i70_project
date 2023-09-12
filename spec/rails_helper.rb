@@ -73,3 +73,9 @@ VCR.configure do |config|
   config.filter_sensitive_data('<GOOG_KEY>') { ENV["goog_api"] }
 end
 
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
