@@ -39,7 +39,6 @@ RSpec.describe DurationService do
 
     it "takes destination params and returns durations for each destination" do
       result = @service.durations
-      binding.pry
 
       expect(result).to be_a(Hash)
       expect(result).to have_key(:destination_addresses)
