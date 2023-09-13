@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694529000&destinations=place_id:ChIJDW4E2OtRaocR6Ny-eVsZRyY%7Cplace_id:ChIJy0LIeaDKa4cRW2sSTH03-bU%7Cplace_id:ChIJe2Rv9PdfaocR-3_TarNZh2M&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694615400&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 12 Sep 2023 14:23:17 GMT
+      - Wed, 13 Sep 2023 16:05:22 GMT
       Pragma:
       - no-cache
       Expires:
@@ -30,45 +30,27 @@ http_interactions:
       - no-cache, must-revalidate
       Vary:
       - Accept-Language
-      X-Goog-Maps-Metro-Area:
-      - Denver, CO
       Server:
       - mafe
       Content-Length:
-      - '1804'
+      - '235'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=115
+      - gfet4t7; dur=30
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: "{\n   \"destination_addresses\" : \n   [\n      \"I-70, Dillon, CO
-        80435, USA\",\n      \"Bridger Ct, Winter Park, CO 80482, USA\",\n      \"102
-        Wheeler Pl, Frisco, CO 80443, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n
-        \     \"Golden, CO, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
-        : \n         [\n            {\n               \"distance\" : \n               {\n
-        \                 \"text\" : \"48.1 mi\",\n                  \"value\" : 77365\n
-        \              },\n               \"duration\" : \n               {\n                  \"text\"
-        : \"53 mins\",\n                  \"value\" : 3178\n               },\n               \"duration_in_traffic\"
-        : \n               {\n                  \"text\" : \"1 hour 3 mins\",\n                  \"value\"
-        : 3780\n               },\n               \"status\" : \"OK\"\n            },\n
-        \           {\n               \"distance\" : \n               {\n                  \"text\"
-        : \"56.6 mi\",\n                  \"value\" : 91080\n               },\n               \"duration\"
-        : \n               {\n                  \"text\" : \"1 hour 11 mins\",\n                  \"value\"
-        : 4236\n               },\n               \"duration_in_traffic\" : \n               {\n
-        \                 \"text\" : \"1 hour 23 mins\",\n                  \"value\"
-        : 4986\n               },\n               \"status\" : \"OK\"\n            },\n
-        \           {\n               \"distance\" : \n               {\n                  \"text\"
-        : \"69.0 mi\",\n                  \"value\" : 111076\n               },\n
-        \              \"duration\" : \n               {\n                  \"text\"
-        : \"1 hour 13 mins\",\n                  \"value\" : 4401\n               },\n
-        \              \"duration_in_traffic\" : \n               {\n                  \"text\"
-        : \"1 hour 28 mins\",\n                  \"value\" : 5264\n               },\n
-        \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
-        \  \"status\" : \"OK\"\n}"
-  recorded_at: Tue, 12 Sep 2023 14:23:17 GMT
+      string: |-
+        {
+           "destination_addresses" : [],
+           "error_message" : "departure_time is in the past. Traffic information is only available for future and current times.",
+           "origin_addresses" : [],
+           "rows" : [],
+           "status" : "INVALID_REQUEST"
+        }
+  recorded_at: Wed, 13 Sep 2023 16:05:22 GMT
 recorded_with: VCR 6.2.0
