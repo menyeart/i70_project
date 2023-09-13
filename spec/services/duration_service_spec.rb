@@ -24,8 +24,9 @@ RSpec.describe DurationService do
     # UTC adder 25200 (gets you to midnight)
 
     today_at_time = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time + 25200 + 28800 + 1800).to_i
+    destination = "place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw"
 
-    @service = DurationService.new(today_at_time)
+    @service = DurationService.new(today_at_time, destination)
   end
 
   describe "exists and has an api call", :vcr do
