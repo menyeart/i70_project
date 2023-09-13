@@ -1,7 +1,7 @@
 class DurationService
-  def initialize(departure_time, resorts)
+  def initialize(departure_time, resort)
     @departure_time = departure_time
-    @resorts = resorts
+    @resort = resort
   end
 
   def conn
@@ -9,7 +9,7 @@ class DurationService
   end
 
   def durations
-    get_url("maps/api/distancematrix/json?destinations=#{@resorts}M&origins=Golden, CO&units=imperial&key=#{ENV['goog_api']}&traffic_model=pessimistic&departure_time=#{@departure_time}")
+    get_url("maps/api/distancematrix/json?destinations=#{@resort}&origins=Golden, CO&units=imperial&key=#{ENV['goog_api']}&traffic_model=pessimistic&departure_time=#{@departure_time}")
   end
 
   def get_url(url)
