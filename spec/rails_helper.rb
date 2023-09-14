@@ -71,6 +71,10 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
   config.hook_into :webmock
   config.filter_sensitive_data('<GOOG_KEY>') { ENV["goog_api"] }
+  # config.register_request_matcher(:custom_uri_matcher) do |request_1, request_2|
+  #   uri_prefix_to_match = "https://maps.googleapis.com"
+  #   request_1.uri.start_with?(uri_prefix_to_match) && request_2.uri.start_with?(uri_prefix_to_match)
+  end
 end
 
 Shoulda::Matchers.configure do |config|
