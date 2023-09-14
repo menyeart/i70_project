@@ -50,6 +50,7 @@ group :development, :test do
   gem "vcr"
   gem "pry"
   gem "shoulda-matchers"
+  gem "timecop"
 end
 
 group :development do
