@@ -5,11 +5,20 @@ class DurationService
   end
 
   def conn
-    Faraday.new(url: "https://maps.googleapis.com")
+    Faraday.new(
+      url: "https://maps.googleapis.com",
+      params: {
+        destinations: @resort,
+        origins: "Golden, CO",
+        key: ENV['goog_api'],
+        traffic_model: "pessimistic",
+        departure_time: @departure_time
+      }
+    )
   end
 
   def durations
-    get_url("maps/api/distancematrix/json?destinations=#{@resort}&origins=Golden, CO&units=imperial&key=#{ENV['goog_api']}&traffic_model=pessimistic&departure_time=#{@departure_time}")
+    get_url("maps/api/distancematrix/json")
   end
 
   def get_url(url)
