@@ -25,7 +25,7 @@ RSpec.describe DurationService do
     # 10:00 36000
     # UTC adder 25200 (gets you to midnight)
 
-    today_at_time = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time + 25200 + 28800 + 1800).to_i
+    today_at_time = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time + 25200 + 28800 + 50000).to_i
     destination = "place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw"
 
     @service = DurationService.new(today_at_time, destination)
