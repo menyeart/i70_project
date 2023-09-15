@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694615400&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694701800&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 13 Sep 2023 16:05:22 GMT
+      - Thu, 14 Sep 2023 13:33:53 GMT
       Pragma:
       - no-cache
       Expires:
@@ -30,27 +30,32 @@ http_interactions:
       - no-cache, must-revalidate
       Vary:
       - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Denver, CO
       Server:
       - mafe
       Content-Length:
-      - '235'
+      - '743'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=30
+      - gfet4t7; dur=142
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: |-
-        {
-           "destination_addresses" : [],
-           "error_message" : "departure_time is in the past. Traffic information is only available for future and current times.",
-           "origin_addresses" : [],
-           "rows" : [],
-           "status" : "INVALID_REQUEST"
-        }
-  recorded_at: Wed, 13 Sep 2023 16:05:22 GMT
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"23715 US-50, Salida,
+        CO 81201, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n      \"Golden,
+        CO, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n
+        \        [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"148 mi\",\n                  \"value\" : 238599\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"2 hours 42 mins\",\n                  \"value\" : 9730\n               },\n
+        \              \"duration_in_traffic\" : \n               {\n                  \"text\"
+        : \"3 hours 2 mins\",\n                  \"value\" : 10932\n               },\n
+        \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
+        \  \"status\" : \"OK\"\n}"
+  recorded_at: Thu, 14 Sep 2023 13:33:53 GMT
 recorded_with: VCR 6.2.0
