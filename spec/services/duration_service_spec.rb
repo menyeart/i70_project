@@ -2,8 +2,8 @@ require "rails_helper"
 
 RSpec.describe DurationService do
   before(:each) do
-    current_time = Time.now
-    Timecop.freeze(current_time)
+      time = Time.local(2023, 9, 16, 4, 0, 0)
+      Timecop.travel(time)
     # Need elapsed seconds since Jan 1 1970, to the start(midnight) of the current day, plus however many seconds for each start destination
 
     # Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time
