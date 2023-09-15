@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe "Forecast request spec", type: :request do
   describe "#index", :vcr do
     before(:each) do
+      time = Time.local(2023, 9, 16, 4, 0, 0)
+      Timecop.travel(time)
     
       loveland = SkiArea.create!(name: "Loveland", location_id: "ChIJDW4E2OtRaocR6Ny-eVsZRyY" )
       winter_park = SkiArea.create!(name: "Winter Park", location_id: "ChIJy0LIeaDKa4cRW2sSTH03-bU" )
@@ -18,8 +20,6 @@ RSpec.describe "Forecast request spec", type: :request do
 
       it "returns a duration forecast with the specfied attributes" do
         get "/api/v1/forecast?direction=west"
-        
-        binding.pry
         forecast = JSON.parse(response.body, symbolize_names: true)
  
         expect(response).to be_successful

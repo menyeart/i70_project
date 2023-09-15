@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694701800&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic&units=imperial
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694922800&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 14 Sep 2023 13:33:53 GMT
+      - Fri, 15 Sep 2023 21:36:51 GMT
       Pragma:
       - no-cache
       Expires:
@@ -35,13 +35,13 @@ http_interactions:
       Server:
       - mafe
       Content-Length:
-      - '743'
+      - '744'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=142
+      - gfet4t7; dur=172
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
@@ -50,12 +50,12 @@ http_interactions:
         CO 81201, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n      \"Golden,
         CO, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n
         \        [\n            {\n               \"distance\" : \n               {\n
-        \                 \"text\" : \"148 mi\",\n                  \"value\" : 238599\n
+        \                 \"text\" : \"239 km\",\n                  \"value\" : 238599\n
         \              },\n               \"duration\" : \n               {\n                  \"text\"
         : \"2 hours 42 mins\",\n                  \"value\" : 9730\n               },\n
         \              \"duration_in_traffic\" : \n               {\n                  \"text\"
-        : \"3 hours 2 mins\",\n                  \"value\" : 10932\n               },\n
+        : \"2 hours 48 mins\",\n                  \"value\" : 10082\n               },\n
         \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
         \  \"status\" : \"OK\"\n}"
-  recorded_at: Thu, 14 Sep 2023 13:33:53 GMT
+  recorded_at: Sat, 16 Sep 2023 10:00:00 GMT
 recorded_with: VCR 6.2.0
