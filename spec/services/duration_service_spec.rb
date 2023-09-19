@@ -2,32 +2,11 @@ require "rails_helper"
 
 RSpec.describe DurationService do
   before(:each) do
-      time = Time.local(2023, 9, 16, 4, 0, 0)
-      Timecop.travel(time)
-    # Need elapsed seconds since Jan 1 1970, to the start(midnight) of the current day, plus however many seconds for each start destination
-
-    # Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time
-
-    # 5 hours : 18000
-    # 15 min : 900
-
-    # 5:30 19800
-    # 5:45 20700
-    # 6:00 21600
-    # 6:15 22500
-    # 6:30 23400
-    # 6:45 24300
-    # 7:00 25200
-    # 7:15 26100
-    # 7:30 27000
-    # 7:45 27900
-    # 8:00 28800
-    # 10:00 36000
-    # UTC adder 25200 (gets you to midnight)
-
+    time = Time.local(2024, 9, 16, 4, 0, 0)
+    Timecop.travel(time)
+    # Need elapsed seconds since Jan 1 1970, to the start(midnight) of the current day, plus however many seconds for each start destination(5:30 -9:00 in 15 min increments)
     today_at_time = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time + 25200 + 28800 + 50000).to_i
     destination = "place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw"
-
     @service = DurationService.new(today_at_time, destination)
   end
 
