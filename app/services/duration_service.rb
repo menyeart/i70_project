@@ -9,7 +9,7 @@ class DurationService
       url: "https://maps.googleapis.com",
       params: {
         destinations: @resort,
-        origins: "Golden, CO",
+        origins: "Hogback Park-n-Ride",
         key: ENV['goog_api'],
         traffic_model: "pessimistic",
         departure_time: @departure_time
