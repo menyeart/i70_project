@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1694922800&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Golden,%20CO&traffic_model=pessimistic
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=1726545200&destinations=place_id:ChIJtzbUKLpCFYcRGpheZl7SdZw&key=<GOOG_KEY>&origins=Hogback%20Park-n-Ride&traffic_model=pessimistic
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Fri, 15 Sep 2023 21:36:51 GMT
+      - Tue, 19 Sep 2023 13:54:28 GMT
       Pragma:
       - no-cache
       Expires:
@@ -35,27 +35,27 @@ http_interactions:
       Server:
       - mafe
       Content-Length:
-      - '744'
+      - '763'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=172
+      - gfet4t7; dur=93
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
       string: "{\n   \"destination_addresses\" : \n   [\n      \"23715 US-50, Salida,
-        CO 81201, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n      \"Golden,
-        CO, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n
-        \        [\n            {\n               \"distance\" : \n               {\n
-        \                 \"text\" : \"239 km\",\n                  \"value\" : 238599\n
+        CO 81201, USA\"\n   ],\n   \"origin_addresses\" : \n   [\n      \"18560 US-40,
+        Golden, CO 80401, USA\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"234 km\",\n                  \"value\" : 234221\n
         \              },\n               \"duration\" : \n               {\n                  \"text\"
-        : \"2 hours 42 mins\",\n                  \"value\" : 9730\n               },\n
+        : \"2 hours 37 mins\",\n                  \"value\" : 9424\n               },\n
         \              \"duration_in_traffic\" : \n               {\n                  \"text\"
-        : \"2 hours 48 mins\",\n                  \"value\" : 10082\n               },\n
+        : \"2 hours 48 mins\",\n                  \"value\" : 10088\n               },\n
         \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
         \  \"status\" : \"OK\"\n}"
-  recorded_at: Sat, 16 Sep 2023 10:00:00 GMT
+  recorded_at: Mon, 16 Sep 2024 10:00:00 GMT
 recorded_with: VCR 6.2.0
