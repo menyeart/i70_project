@@ -5,6 +5,7 @@ ruby "3.1.1"
 gem 'psych', '~>3.0'
 gem "faraday"
 gem "figaro"
+gem "jsonapi-serializer"
 
 
 

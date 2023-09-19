@@ -2,10 +2,8 @@ class ForecastFacade
   def initialize(direction)
     @direction = direction
     @resort_object_hash = Hash.new { |h, k| h[k] = h.dup.clear }
-    # real one
-    # @today_seconds = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time).to_i + 25200
-    @today_seconds = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time).to_i + 50000
-    @departure_times = [@today_seconds + 19800, @today_seconds + 20700, @today_seconds + 21600, @today_seconds + 22500, @today_seconds + 23400, @today_seconds + 24300, @today_seconds + 25200, @today_seconds + 26100, @today_seconds + 27000, @today_seconds + 27900, @today_seconds + 28800 ]
+    @today_seconds = (Date.today.to_time - "1970-01-01T00:00:00Z".to_date.to_time).to_i + 25200
+    @departure_times = calculate_departure_times
     @all_ski_areas = SkiArea.all
   end
 
@@ -17,6 +15,7 @@ class ForecastFacade
         @resort_object_hash[area.name][time]["duration_with_traffic"] = data[:rows].first[:elements].first[:duration_in_traffic][:value]
       end
     end
+    Forecast.new("west", @resort_object_hash)
   end
 
   def format_location_id(id)
@@ -27,6 +26,13 @@ class ForecastFacade
     @direction == "west" ? to_resort_times : to_golden_times
   end
 
-  # def to_golden_times
-  # end
+  def calculate_departure_times
+    time = @today_seconds + 19800
+    times = [time]
+    10.times do
+      time += 900
+      times << time
+    end
+    times
+  end
 end
